@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        .pubu{width: 790px;position: relative; margin:0 auto;}
+        .pubu .box{width: 250px;position: absolute; border:5px solid black; border-radius: 20px;}
+    </style>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            var boxs=$(".box")
+            var boxlis=$(".box").length//盒子个数
+           for(var i=0;i<boxlis;i++){
+                var left=i%3*270
+               // 规律，每个盒子的left值，就是自己的序号
+                                                //除以3的余数，乘以270
+                //现在正在考虑的是第i号盒子，那么我们就要累加
+                //第i-3号、i-6号、i-9号……盒子的高度
+                var sum=0;
+                for(var j=i-3;j>=0;j=j-3){
+                    sum=sum+$(".box").eq(j).height() + 20;
+                }file:///Users/aoyolo/Desktop/pubu/images/8.png
+              $(".box").eq(i).css({"left":left,"top":sum})
+           }
+
+        }
+    </script>
+</head>
+<body>
+   <div class="pubu">
+       <div class="box">
+           <p><img src="images/0.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+       </div>
+       <div class="box">
+           <p><img src="images/1.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           
+       </div>
+       <div class="box">
+           <p><img src="images/2.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+
+       </div>
+        <div class="box">
+           <p><img src="images/3.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           
+
+       </div>
+        <div class="box">
+           <p><img src="images/4.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+          
+           <p>内容</p>
+
+       </div>
+        <div class="box">
+           <p><img src="images/5.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+
+       </div>
+        <div class="box">
+           <p><img src="images/6.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           
+
+       </div>
+       <div class="box">
+           <p><img src="images/7.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           
+
+       </div>
+       <div class="box">
+           <p><img src="images/8.png" alt="" /></p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           <p>内容</p>
+           
+
+       </div>
+   </div> 
+</body>
+</html>
